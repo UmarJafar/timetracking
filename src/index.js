@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class StartBtn extends React.Component {
+  render() {
+    return <button className="tbtn">Start</button>;
+  }
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class StopBtn extends React.Component {
+  render() {
+    return <button className="tbtn">Stop</button>;
+  }
+}
+
+class TScreen extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>1223</p>
+      </div>
+    );
+  }
+}
+
+class TimeTracker extends React.Component {
+  render() {
+    return (
+      <div className="timeapp">
+        <StartBtn />
+        <TScreen />
+        <StopBtn />
+      </div>
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(<TimeTracker />, document.getElementById("root"));
